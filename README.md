@@ -13,3 +13,12 @@ This Python script takes a picture, finds rectangular objects within it (possibl
 
 I tried handling different versions of OpenCV library. If you get an OpenCV Error just make sure OpenCV's version is either 2.x or 4.x
 
+## Example input
+![example intput](example_input.png)
+
+## Example output
+![example output 1](example_output/example_output_1.png)
+![example output 2](example_output/example_output_2.png)
+![example output 3](example_output/example_output_3.png)
+... and so on ...
+
