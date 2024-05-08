@@ -12,7 +12,12 @@ greyscale_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,5))
 gradient = cv2.morphologyEx(greyscale_image, cv2.MORPH_GRADIENT, kernel)
 
+cvVersion = cv2.__version__
+
 target_image_contours = cv2.findContours(gradient, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[1]
+
+if str(cvVersion).startswith('4'):
+    target_image_contours = cv2.findContours(gradient, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
 
 counter = 0
 
